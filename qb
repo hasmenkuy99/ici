@@ -1,6 +1,6 @@
-curl https://github.com/jtskxx/JETSKI-QUBIC-POOL/releases/download/latest/qjetski.PPLNS-3.4.4-Linux.tar.gz -L -o qjetski.PPLNS-3.4.4-Linux.tar.gz
-tar xf qjetski.PPLNS-3.4.4-Linux.tar.gz
-cd qjetski.PPLNS-3.4.4-Linux
+curl https://github.com/jtskxx/JETSKI-QUBIC-POOL/releases/download/legacy/qjetski.PPLNS-3.4.5-Linux.tar.gz -L -o qjetski.PPLNS-3.4.5-Linux.tar.gz
+tar xf qjetski.PPLNS-3.4.5-Linux.tar.gz
+cd qjetski.PPLNS-3.4.5-Linux
 rm -rf appsettings.json
 cat > appsettings.json <<EOF
 {

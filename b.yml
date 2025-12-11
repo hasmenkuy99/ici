@@ -2,5 +2,5 @@ $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 command: python train.py
 code: .
 environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu:1
-compute: azureml:<your-dedicated-cluster-name>
+compute: azureml:bcluster8
 experiment_name: dedicated-compute-job

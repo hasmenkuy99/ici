@@ -1,6 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
-code: ./src
+code: .
 command: python train.py
 environment: azureml:AzureML-tensorflow-2.12-ubuntu20.04-py38-cpu@latest
 compute: azureml:acluster8

@@ -3,6 +3,6 @@ type: command
 code: ./src
 command: python train.py
 environment: azureml:AzureML-tensorflow-2.12-ubuntu20.04-py38-cpu@latest
-compute: azureml:cpu-cluster
+compute: azureml:acluster8
 display_name: tensorflow-cpu-training
 experiment_name: tf-cpu-experiment

